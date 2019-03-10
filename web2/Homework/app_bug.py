@@ -14,10 +14,11 @@ def add_bike():
     return render_template("bike_form.html")
   elif request.method == "POST":
     form = request.form
+    print(form)
     m = form["model"]
     d = form["daily_fee"]
     i = form["image"]
-    y = form("time")
+    y = form["time"]
     new_item = {"model":m, "daily_fee":d, "image":i,"year":y}
     bikes.append(new_item)
     return "Da hoan thanh"
