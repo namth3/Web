@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title style="color: yellow;">Poseidon Restaurant</title>
+</head>
+<body background="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <h1>Welcome to Poseidon Restaurant, {{user}} </h1>
+    <div class="w3-container">
+        {% for item in menu %}
+            <h4 style="background-color:Tomato;">{{item.name}}</h3>
+            <h4 style="background-color:DodgerBlue;">{{item.price}}</h4>
+            <a style ="color: white"; href="/food_list/{{item._id}}">Detail</a>
+        {% endfor  %}
+    </div>  
+</body>
+</html>
